@@ -7,17 +7,88 @@
 
 <h1>Pizza Ordering Form</h1>
 
+<form>
+  
 <h3>Contact Information</h3>
 
+Name: <input type="text" name="name" required><br>
+Phone: <input type="tel" name="phone" required><br>
+Email: <input type="email" name="email" required><br>
+<br>
+  
 <h3>Select Pizza Size</h3>
+
+<select name = "pizzaSize" required>
+    <option value="" disabled selected>Select size</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="extraLarge">Extra Large</option>
+</select>
+<br><br>
 
 <h3>Select Sauce</h3>
 
+<input type="radio" name="sauce" value="marinara" required> Marinara<br>
+<input type="radio" name="sauce" value="ranch" required> Ranch<br>
+<input type="radio" name="sauce" value="noSauce" required> No Sauce<br>
+
 <h3>Select Toppings</h3>
+
+<input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
+<input type="checkbox" name="toppings" value="sausage"> Sausage<br>
+<input type="checkbox" name="toppings" value="mushroom"> Mushroom<br>
+<input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
+<input type="checkbox" name="toppings" value="peppers"> Peppers<br>
+<input type="checkbox" name="toppings" value="onions"> Onions<br>
+<br>
 
 <h3>Additional Instructions</h3>
 
-<p>List of My Favorite Games.</p>
+<textarea name="instructions" rows="4" cols="50" placeholder="Add instructions"></textarea>
+<br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+
+<table border = "1">
+
+<caption>List of My Favorite Games</caption>
+
+<thead>
+<tr>
+    <th>Developer</th>
+    <th>Title</th>
+    <th>Year</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+    <td rowspan="2">Nintendo</td>
+    <td>Animal Crossing: New Horizons</td>
+    <td>2020</td>
+</tr>
+<tr>
+    <td>Super Mario Bros. Wonder</td>
+    <td>2023</td>
+</tr>
+<tr>
+    <td>Mojang Studios</td>
+    <td>Minecraft</td>
+    <td>2011</td>
+</tr>
+<tr>
+    <td>5 Lives Studios</td>
+    <td>Cozy Caravan</td>
+    <td>2026</td>
+</tr>
+<tr>
+    <td colspan = "3"> Count: 4</td>
+</tr>
+</tbody>
+</table>
 
 </body>
 </html>
