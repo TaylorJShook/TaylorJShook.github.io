@@ -1,0 +1,101 @@
+/*5_css1.css*/
+
+/*body style*/
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: lightblue;
+}
+
+/*header styles*/
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 18px 0 12px 0;
+    font-size: 64px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 18px 0px 10px 0px;
+    font-size: 36px;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 16px 0px 10px 0px;
+    font-size: 22px;
+}
+
+/*normal paragraph style*/
+p {
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/*green box paragraph*/
+#paragraph2 {
+    background-color: white;
+    width: 50%;
+    margin: 16px 0px 16px 0px;
+    padding: 22px 26px;
+    border: 4px solid green;
+    line-height: 2;
+}
+
+/*Blue background paragraphs*/
+.blue {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 14px 0;
+    border: 2px solid blue;
+}
+
+/*Link styles*/
+
+/*default link*/
+a {
+    color: blue;
+}
+
+/*W3Schools Link*/
+article section p a {
+    color: red;
+}
+
+
+/*Ordered list style*/
+ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 28px;
+    margin-top: 6px;
+}
+
+
+/*Table style*/
+table {
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 12px;
+    width: 520px;
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: top;
+}
+
+/*header background color*/
+th {
+    background-color: lightgray;
+}
+
+/*cell background color*/
+td {
+    background-color: white;
+}
