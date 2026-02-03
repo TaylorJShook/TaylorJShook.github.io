@@ -1,0 +1,220 @@
+/*7_transition.css*/
+
+:root
+{
+    --jumpMenuWidth: 150px;
+    --headerHeight: 100px;
+    --articleWidth: 300px;
+    --space: 16px;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+/*body*/
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    color: black;
+}
+
+/*left nav*/
+#menuItems
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--jumpMenuWidth);
+    height: 100vh;
+    background: blue;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    z-index: 1100;
+}
+
+/*nav buttons*/
+#menuItems button
+{
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid black;
+    background: blue;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+/*hover nav button*/
+#menuItems button:hover
+{
+    background-color: plum;
+}
+
+/*recent button hover (matches drop menu color)*/
+#recentArticles:hover
+{
+    background-color: plum;
+    color: white;
+}
+
+/*jump menu*/
+#jumpMenu
+{
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    background: plum;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/*show jump menu*/
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover
+{
+    display: block;
+}
+
+/*jump menu items*/
+#jumpMenu li
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*jump menu links*/
+#jumpMenu a
+{
+    display: block;
+    padding: 3px 10px;
+    text-decoration: none;
+    color: blue;
+    background-color: transparent;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/*hover jump menu links*/
+#jumpMenu a:hover
+{
+    background-color: blue;
+    color: #ffffff;
+}
+
+/*main layout*/
+main
+{
+    margin-left: var(--jumpMenuWidth);
+    padding-top: var(--headerHeight);
+}
+
+/*fixed header*/
+main > header
+{
+    position: fixed;
+    top: 0;
+    left: var(--jumpMenuWidth);
+    width: calc(100% - var(--jumpMenuWidth));
+    height: var(--headerHeight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightblue;
+    border-bottom: 1px solid black;
+    padding: 16px;
+    z-index: 1000;
+}
+
+main > header p
+{
+    margin: 0;
+    font-weight: bold;
+}
+
+main > h1
+{
+    margin: 16px;
+}
+
+/*article container*/
+#container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space);
+    padding: 0 20px 20px 20px;
+    align-items: flex-start;
+}
+
+/*article style*/
+#container > article
+{
+    width: var(--articleWidth);
+    background: white;
+    border: 1px solid lightgrey;
+    padding: 10px;
+
+    color: #b7b7b7;
+    transform: scale(1);
+    transform-origin: center;
+    transition: color 2s, transform 2s;
+}
+
+/*hover article*/
+#container > article:hover
+{
+    color: #222;
+    transform: scale(1.08);
+}
+
+/*first letter article style*/
+#container > article > p:first-of-type::first-letter
+{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    line-height: 1;
+    padding-right: 6px;
+}
+
+/*google link arrow image*/
+a[href*="google.com"]::after
+{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    vertical-align: text-bottom;
+    background: url("arrowarrow.png") no-repeat center / contain;
+}
+
+/*thank you*/
+#thanks
+{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    background: plum;
+    z-index: 1001;
+}
+
+/*footer*/
+footer
+{
+    padding: 20px;
+    border-top: 1px solid lightgray;
+    background: lightblue;
+}
