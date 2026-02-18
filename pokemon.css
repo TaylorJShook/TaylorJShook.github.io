@@ -1,0 +1,208 @@
+/*pokemon.css*/
+:root
+{
+    /* Colors + spacing */
+    --pageBg: #2958ff;
+    --panelBg: white;
+    --border: #d91818;
+    --text: #111;
+    --space: 16px;
+}
+
+*
+{
+    /* Consistent sizing */
+    box-sizing: border-box;
+}
+
+body
+{
+    /* Page defaults */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--pageBg);
+    color: var(--text);
+}
+
+#page
+{
+    /* Main panel container */
+    width: min(720px, 92vw);
+    margin: 24px auto;
+    background: var(--panelBg);
+    border: 6px solid var(--border);
+    padding: 24px;
+}
+
+h1
+{
+    /* Page title */
+    text-align: center;
+    margin-top: 0;
+}
+
+#searchSection
+{
+    /* Search area layout */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchRow
+{
+    /* Input + button row */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+#pokemonInput
+{
+    /* Search input size */
+    width: 240px;
+    padding: 6px 8px;
+}
+
+#findBtn, #addBtn
+{
+    /* Button basics */
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#statusText
+{
+    /* Status message spacing */
+    min-height: 20px;
+    margin: 10px 0 0 0;
+}
+
+#pokemonSection
+{
+    /* Main pokemon display area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+#pokemonDisplay
+{
+    /* Image container */
+    width: 280px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokeImg
+{
+    /* Pokemon image scaling */
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+}
+
+#audioBox
+{
+    /* Audio area */
+    width: min(520px, 90%);
+    text-align: center;
+}
+
+#pokeAudio
+{
+    /* Make audio player fit */
+    width: 100%;
+}
+
+#audioNote
+{
+    /* Audio message */
+    margin: 6px 0 0 0;
+    font-size: 0.9rem;
+}
+
+#movesSection
+{
+    /* Move dropdown container */
+    width: min(560px, 95%);
+}
+
+.movesRow
+{
+    /* Row of 2 dropdowns */
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.movesRow select
+{
+    /* Dropdown sizing */
+    width: 240px;
+    padding: 4px 6px;
+}
+
+#addRow
+{
+    /* Add button spacing */
+    margin-top: 6px;
+}
+
+#teamSection
+{
+    /* Team area spacing */
+    margin-top: 22px;
+}
+
+#teamBox
+{
+    /* Team list border box */
+    border: 1px solid #333;
+    padding: 10px;
+    min-height: 40px;
+}
+
+.teamEntry
+{
+    /* One team row layout */
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 6px;
+}
+
+.teamEntry + .teamEntry
+{
+    /* Divider between entries */
+    border-top: 1px solid #333;
+}
+
+.teamEntry img
+{
+    /* Team sprite sizing */
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.teamMoves
+{
+    /* Move list spacing */
+    margin: 0;
+    padding-left: 18px;
+}
+
+#teamNote
+{
+    /* Team note text */
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+}

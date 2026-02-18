@@ -1,0 +1,73 @@
+<!--pokemon.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page settings and links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Builder</title>
+    <link rel="stylesheet" href="pokemon.css">
+    <script src="pokemon.js" defer></script>
+</head>
+
+<body>
+    <main id="page">
+
+        <!-- Title-->
+        <h1>Pokemon Team Builder</h1>
+
+        <!-- Search section-->
+        <section id="searchSection">
+            <label for="pokemonInput">Name or ID</label>
+            <div id="searchRow">
+                <input id="pokemonInput" type="text" placeholder="ex: 6 or charizard">
+                <button id="findBtn" type="button">Find</button>
+            </div>
+
+            <p id="statusText"></p>
+        </section>
+
+        <!-- Pokemon display section-->
+        <section id="pokemonSection">
+            <div id="pokemonDisplay">
+                <img id="pokeImg" alt="Pokemon sprite" src="">
+            </div>
+
+            <!-- Audio section -->
+            <div id="audioBox">
+                <audio id="pokeAudio" controls></audio>
+                <p id="audioNote"></p>
+            </div>
+
+            <!-- Moves dropdowns -->
+            <section id="movesSection">
+                <div class="movesRow">
+                    <select id="move1"></select>
+                    <select id="move3"></select>
+                </div>
+
+                <div class="movesRow">
+                    <select id="move2"></select>
+                    <select id="move4"></select>
+                </div>
+            </section>
+
+            <!-- Add to team button -->
+            <div id="addRow">
+                <button id="addBtn" type="button">Add to Team</button>
+            </div>
+        </section>
+
+        <section id="teamSection">
+            <h2>Your Team</h2>
+
+            <div id="teamBox">
+                <!-- Team entries get added here -->
+            </div>
+
+            <p id="teamNote"></p>
+        </section>
+
+    </main>
+</body>
+</html>
